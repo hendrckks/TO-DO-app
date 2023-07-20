@@ -7,13 +7,14 @@ function Wrapper() {
   const [tasks, setTasks] = useState([])
 
   function addTask(task) {
-    setTasks([...tasks, {id: uuidv4(), task: task, 
+    setTasks([...tasks, {id: uuidv4(), todo: task, 
     completed: false, isEditing: false}])
+    console.log(tasks)
   }
   return(
     <div className="Wrapper">
       <h1>Get Things Done</h1>
-      <Form  addTask={addTask} />
+      <Form  addTask = {addTask} />
     </div>
   )
 }
