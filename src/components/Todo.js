@@ -1,8 +1,13 @@
 import React from 'react'
 
-export const Todo = () => {
+function Todo({task, toogleComplete}) {
   return (
-    <div>Todo</div>
+    <div className='Todo'>
+      <p onClick={() => toogleComplete(task.id)}
+      className={`${task.completed ? 'completed' : ""}`}>{task.task}</p>
+    </div>
+
   )
 }
 
+export default Todo;

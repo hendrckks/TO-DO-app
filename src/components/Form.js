@@ -6,11 +6,12 @@ function Form({addTask}) {
   const handleSubmit = e => {
     e.preventDefault();
     addTask(value);
+    setValue("");
   }
 
     return (
       <form className='TodoForm' onSubmit={handleSubmit}>
-        <input className='todo-input' type='text' placeholder='Add a new task' onChange=
+        <input className='todo-input' value={value} type='text' placeholder='Add a new task' onChange=
         {(e) => setValue(e.target.value)}/>
         <button type='submit' className='todo-btn'>Add New Task</button>
       </form>
