@@ -11,9 +11,10 @@ function Form({addTask}) {
 
     return (
       <form className='TodoForm' onSubmit={handleSubmit}>
-        <input className='todo-input' value={value} type='text' placeholder='Add a new task' onChange=
-        {(e) => setValue(e.target.value)}/>
-        <button type='submit' className='todo-btn'>Add New Task</button>
+        <input className='todo-input' value={value} type='text'
+         placeholder='Add a new task' onChange=
+         {(e) => setValue(e.target.value)}/>
+         <button type='submit' className='todo-btn'>Add New Task</button>
       </form>
     );
 }
