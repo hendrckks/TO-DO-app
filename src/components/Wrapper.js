@@ -29,9 +29,9 @@ function Wrapper() {
     
   }
   
-  function editTask (task, id) {
+  function editTodo (todo, id) {
     setTasks(tasks.map(task => task.id ===id ? 
-      {...task, task, isEditing : !task.isEditing} : task))
+      {...task, todo, isEditing : !task.isEditing} : task))
   }
 
   return(

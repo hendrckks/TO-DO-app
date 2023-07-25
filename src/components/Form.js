@@ -5,8 +5,12 @@ function Form({addTask}) {
   
   const handleSubmit = e => {
     e.preventDefault();
-    addTask(value);
-    setValue("");
+    if (value) {
+      // add todo
+      addTask(value);
+      // clear form after submission
+      setValue('');
+    }
   }
 
     return (
