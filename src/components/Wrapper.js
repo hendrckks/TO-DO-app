@@ -9,14 +9,14 @@ function Wrapper() {
   const [tasks, setTasks] = useState([])
 
   function addTask(task) {
-    setTasks([...tasks, {id: uuidv4(), task: task, 
+    setTasks([...tasks, {id: uuidv4(), todo: task, 
     completed: false, isEditing: false}])
     console.log(tasks)
   }
 
   function toogleComplete(id) {
     setTasks(tasks.map( task => task.id === id ? 
-      {...task, completed :  !task.completed} :task))
+      {...task, completed: !task.completed} :task))
   }
 
   function deleteTodo(id) {
@@ -31,7 +31,7 @@ function Wrapper() {
   
   function editTodo (todo, id) {
     setTasks(tasks.map(task => task.id ===id ? 
-      {...task, todo, isEditing : !task.isEditing} : task))
+      {...task, todo, isEditing: !task.isEditing} : task))
   }
 
   return(
@@ -40,8 +40,8 @@ function Wrapper() {
       <Form  addTask = {addTask} />
       {tasks.map((task, index) => (
         task.isEditing ? ( <EditTodoForm  editTask={editTodo}
-           task={task}/> ) : (
-          <Todo task={task} key={index}
+           todo={task}/> ) : (
+          <Todo todo={task} key={index}
         toogleComplete={toogleComplete}
         deleteTodo={deleteTodo}
         editTask={editTask} />
