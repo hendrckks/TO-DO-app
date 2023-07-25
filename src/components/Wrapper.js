@@ -36,7 +36,7 @@ function Wrapper() {
 
   return(
     <div className="Wrapper">
-      <h1>Get Things Done</h1>
+      <h1 className='style'>Get Things Done</h1>
       <Form  addTask = {addTask} />
       {tasks.map((task, index) => (
         task.isEditing ? ( <EditTodoForm  editTask={editTodo}

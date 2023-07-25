@@ -18,7 +18,7 @@ function Form({addTask}) {
         <input className='todo-input' value={value} type='text'
          placeholder='Add a new task' onChange=
          {(e) => setValue(e.target.value)}/>
-         <button type='submit' className='todo-btn'>Add New Task</button>
+         <button type='submit' className='todo-btn'>Add Task</button>
       </form>
     );
 }

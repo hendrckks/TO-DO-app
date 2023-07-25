@@ -9,7 +9,10 @@ function Todo({todo, toogleComplete, deleteTodo, editTask}) {
         <p onClick={() => toogleComplete(todo.id)}
         className={`${todo.completed ? 'completed' : ""}`}>{todo.todo}</p>
         <div>
-            <FontAwesomeIcon icon={faTrashCan} onClick={() => deleteTodo(todo.id)} />
+            <FontAwesomeIcon icon={faTrashCan} 
+            onClick={() => deleteTodo(todo.id)}
+            style={{ marginRight: '8px' }} 
+            />
             <FontAwesomeIcon icon={faPenToSquare} onClick={() => editTask(todo.id)} />
         </div>
      </div>
